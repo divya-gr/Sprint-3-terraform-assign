@@ -6,8 +6,8 @@ resource "aws_s3_bucket" "b" {
     Environment = "Dev"
   }
 }
-resource "aws_s3_bucket_acl" "example" {
+#resource "aws_s3_bucket_acl" "example" {
   # bucket = var.bucket_name
-  bucket = aws_s3_bucket.b.id
-  acl = var.acl
-}
+ # bucket = aws_s3_bucket.b.id
+  #acl = var.acl
+#}
