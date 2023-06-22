@@ -6,11 +6,11 @@ resource "aws_instance" "web" {
     Name = var.name
   }
 }
-resource "aws_s3_bucket" "b" {
-  bucket = var.bucket_name2
+#resource "aws_s3_bucket" "b" {
+  #bucket = var.bucket_name2
 
-  tags = {
-    Name        = "My-bucket-1"
-    Environment = "Dev"
-  }
-}
+  #tags = {
+   # Name        = "My-bucket-1"
+    #Environment = "Dev"
+  #}
+#}
