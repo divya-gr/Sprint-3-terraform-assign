@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('AWS_CONFIGURE') {
             steps {
-               withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
-    // some block
-}
+               withCredentials([usernamePassword(credentialsId: 'ASIAZ3CUIHQKPRYO344V', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')])
+                 }
             }
         }
         stage('Checkout') {
