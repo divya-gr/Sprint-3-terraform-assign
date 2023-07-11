@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+        stage('AWS_CONFIGURE') {
+            steps {
+               withCredentials([<object of type com.cloudbees.jenkins.plugins.awscredentials.AmazonWebServicesCredentialsBinding>]) {
+    // some block
+}
+            }
+        }
         stage('Checkout') {
             steps {
                 checkout scm
