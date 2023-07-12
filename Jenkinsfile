@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     environment{
         AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY= credentials('AWS_SECRET_ACCESS_KEY')
@@ -16,10 +16,10 @@ pipeline {
                     git branch: 'main', changelog: false, poll: false, url: 'https://github.com/divya-gr/Sprint-3-terraform-assign.git'
                  }
         }
-        stage('Build') {
+        stage('use-dir') {
             steps {
-                dir('/var/jenkins_home/workspace/implementation') {
-                    /* execute commands in the scripts directory */
+                dir('implementation') {
+                  sh 'cat main.tf'
                 }
             }
         stage('Terraform init') {
